@@ -64,10 +64,12 @@ function App() {
 	const getCitasBarbero = async idBarbero => {
 		try {
 			const res = await axios.get(
-				'https://backend-production-3de4.up.railway.app/barbero/citas/' + idBarbero
+				'https://backend-production-3de4.up.railway.app/barbero/citas/' + idBarbero 
 			)
 			dispatch(SET_CITAS_BARBERO(res.data))
+			
 		} catch (error) {
+			
 			console.log(error)
 		}
 	}
